@@ -1,0 +1,12 @@
+.container{
+	padding-top: 50px;
+}
+
+#clock{
+	width: 355px;
+	height: 75px;
+	color: red;
+	font-size: 50px;
+	border: 5px solid black;
+	border-radius: 10px;
+}
