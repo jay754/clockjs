@@ -70,7 +70,7 @@ $(function(){
 			addedTime = secs + currentTime;
 			localStorage.setItem('time', addedTime);
 
-			$('.notification').append('Your time has been updated. The Alarm will go off in ' + secs);
+			$('.notification').html('Your time has been updated. The Alarm will go off in ' + secs);
 			$('.notification').addClass('alert alert-success');
 
 			console.log(addedTime);
