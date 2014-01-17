@@ -103,7 +103,11 @@ $(function(){
 		var timeleft = alarmtime - currentTime;
 
 		if(timeleft > 0){
-			$('.timeleft').append(timeleft);
+			$('.timeleft').html('Time Left: '+ timeleft);
+		}
+		else if(timeleft === 0){
+			sleep(1000);
+			location.reload();
 		}
 	}
 
@@ -117,6 +121,13 @@ $(function(){
 		
 		console.log(hours+':'+mins+':'+secs);
 	}
+
+	//for stopping delaying the one second after the page refreshes
+
+	function sleep(delay) {
+	    var start = new Date().getTime();
+	    while (new Date().getTime() < start + delay);
+    }
 
 	var i = setInterval(getTime, 1000);
 	buttons(i);
